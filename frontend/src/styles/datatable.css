@@ -1,0 +1,318 @@
+/* ============================================================
+   Card wrapper
+   ============================================================ */
+.card {
+    background: #fff;
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.panel-head h3 {
+    margin: 0;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--ink, #111827);
+}
+
+.panel-head .sub {
+    font-size: 12.5px;
+    color: var(--muted, #9ca3af);
+    margin-top: 2px;
+}
+
+.chip {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   Toolbar (search bar)
+   ============================================================ */
+.dt-toolbar {
+    display: flex;
+    justify-content: space-between;
+    /* length menu left, search right */
+    align-items: center;
+    gap: 12px;
+    padding: 0 0 14px;
+    flex-wrap: wrap;
+}
+
+.dt-toolbar label {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 13px;
+    color: var(--ink-soft, #4b5563);
+}
+
+.dt-toolbar select {
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: var(--ink, #111827);
+    background: #f9fafb;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.dt-toolbar select:focus {
+    border-color: var(--accent, #6366f1);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.dt-toolbar input[type="search"] {
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 9px;
+    padding: 8px 13px;
+    font-size: 13px;
+    color: var(--ink, #111827);
+    background: #f9fafb;
+    outline: none;
+    width: 240px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.dt-toolbar input[type="search"]:focus {
+    border-color: var(--accent, #6366f1);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+    background: #fff;
+}
+
+.dt-toolbar input[type="search"]::placeholder {
+    color: var(--muted, #9ca3af);
+}
+
+/* ============================================================
+   Table shell
+   ============================================================ */
+.table-wrap {
+    overflow-x: auto;
+}
+
+.dt-clean table.dataTable {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Header */
+.dt-clean table.dataTable thead th {
+    text-align: left;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+    color: var(--muted, #6b7280);
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    background: transparent;
+    white-space: nowrap;
+}
+
+.dt-clean table.dataTable thead th.dt-orderable-asc,
+.dt-clean table.dataTable thead th.dt-orderable-desc {
+    cursor: pointer;
+    transition: color 0.12s ease;
+}
+
+.dt-clean table.dataTable thead th.dt-orderable-asc:hover,
+.dt-clean table.dataTable thead th.dt-orderable-desc:hover {
+    color: var(--ink, #111827);
+}
+
+/* remove default DataTables sort caret clutter, use a subtle one */
+.dt-clean table.dataTable thead th.dt-orderable-asc span.dt-column-order,
+.dt-clean table.dataTable thead th.dt-orderable-desc span.dt-column-order {
+    opacity: 0.4;
+}
+
+/* Body */
+.dt-clean table.dataTable tbody td {
+    padding: 13px 16px;
+    font-size: 13.5px;
+    text-align: left;
+    color: var(--ink, #1f2937);
+    border-bottom: 1px solid #f1f2f4;
+    vertical-align: middle;
+}
+
+.dt-clean table.dataTable tbody tr {
+    transition: background-color 0.12s ease;
+}
+
+.dt-clean table.dataTable tbody tr:hover {
+    background: #fafbfc;
+}
+
+.dt-clean table.dataTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================================
+   Cell content
+   ============================================================ */
+
+/* Customer cell */
+.dt-clean .cust {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.dt-clean .avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    color: #4f46e5;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+}
+
+.dt-clean .email {
+    font-size: 12px;
+    color: var(--muted, #9ca3af);
+    margin-top: 1px;
+}
+
+/* Amount */
+.dt-clean td.amount {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink, #111827);
+}
+
+/* Status badge */
+.dt-clean .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* More icon */
+.dt-clean .row-more {
+    text-align: right;
+    color: var(--muted, #9ca3af);
+    cursor: pointer;
+    width: 32px;
+    transition: color 0.12s ease;
+}
+
+.dt-clean .row-more:hover {
+    color: var(--ink, #111827);
+}
+
+/* ============================================================
+   Footer (info + pagination)
+   ============================================================ */
+.dt-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 2px 2px;
+    border-top: 1px solid var(--border, #e5e7eb);
+    margin-top: 6px;
+}
+
+.dt-info {
+    font-size: 12.5px;
+    color: var(--muted, #9ca3af);
+}
+
+.dt-paging {
+    display: flex;
+    gap: 4px;
+}
+
+.dt-paging-button {
+    min-width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft, #4b5563);
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: all 0.12s ease;
+}
+
+.dt-paging-button:hover:not(.disabled):not(.current) {
+    background: #f3f4f6;
+    border-color: var(--border, #e5e7eb);
+}
+
+.dt-paging-button.current {
+    background: #4f46e5;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(79, 70, 229, 0.3);
+}
+
+.dt-paging-button.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Hide stray default DataTables elements that can leave empty gaps */
+.dt-clean .dataTables_length,
+.dt-clean .dataTables_processing,
+.dt-clean .dataTables_scrollHead {
+    display: none;
+}
+
+.dt-empty {
+    display: none !important;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 640px) {
+    .panel-head {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dt-toolbar {
+        justify-content: stretch;
+    }
+
+    .dt-toolbar input[type="search"] {
+        width: 100%;
+    }
+
+    .dt-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
