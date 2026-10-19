@@ -82,12 +82,12 @@ export default function Sidebar({
       <div className="brand">
 
         <div className="brand-mark">
-          ⚙️
+          <i className="fa-solid fa-mug-hot text-xl" />
         </div>
 
         {!collapsed && (
           <div className="brand-name">
-            ShopAdmin
+            Cafe Pos System
           </div>
         )}
 

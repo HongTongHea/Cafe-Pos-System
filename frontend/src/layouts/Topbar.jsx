@@ -19,10 +19,10 @@ export default function Topbar() {
   };
   return (
     <header className="topbar">
-      <div className="search px-6">
+      {/* <div className="search px-6">
         <Search size={16} />
         <input placeholder="Search customers, orders, products…" />
-      </div>
+      </div> */}
 
       <div className="topbar-right">
         <div className="icon-btn">

@@ -216,9 +216,11 @@
   width: 30px;
   height: 30px;
   border-radius: 9px;
-  background: linear-gradient(135deg, #6366F1, #4338CA);
+  /* background: linear-gradient(135deg, #6366F1, #4338CA); */
+  background: #d9ad7c;
   display: flex;
   align-items: center;
+  color: #38271f;
   justify-content: center;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
